@@ -1,10 +1,20 @@
-# MyReads Project
+# My Reads App Project
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+In the My Reads App project, you'll Have a bookshelf that allows you to select and categorize books you have read, are currently reading, or want to read. The project emphasizes using React to build the application and provides an API server and client library that you will use to persist information as you interact with the application.
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://reactjs.org/docs/create-a-new-react-app.html) to bootstrap the project.
+## App Functionality
 
-## TL;DR
+### Main Page
+In this application, the main page displays a list of "shelves" (i.e. categories), each of which contains a number of books. The three shelves are:
+
+- Currently Reading
+- Want to Read
+- Read
+
+### Search Page 
+The search page has a text input that may be used to find books. As the value of the text input changes, the books that match that query are displayed on the page, along with a control that lets you add the book to your library.
+
+## Get Started
 
 To get started developing right away:
 
@@ -14,27 +24,32 @@ To get started developing right away:
 ## What You're Getting
 
 ```bash
-├── CONTRIBUTING.md
 ├── README.md - This file.
-├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use with your app.
-├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
+├── package.json # npm package manager file.
 ├── public
 │   ├── favicon.ico # React Icon, You may change if you wish.
 │   └── index.html # DO NOT MODIFY
 └── src
-    ├── App.css # Styles for your app. Feel free to customize this as you desire.
-    ├── App.js # This is the root of your app. Contains static HTML right now.
-    ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
-    ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
-    ├── icons # Helpful images for your app. Use at your discretion.
+    ├── components # All App Components
+    │   ├── App.js # This is the root app. Contains Holds the Main State of Books and Routers.
+    │   ├── BookShelf.js # The Main Page "/" Hodling the View of Shelfs Componantes
+    │   ├── ShelfView.js # Usable Shelf Components Handle the View for every shelf
+    │   ├── SearchPage.js # Search Page "/search" for searching books
+    │   ├── BookResults.js # Book Search Results Componets to view the Book Results
+    │   ├── BookView.js # Usable Book View Components to view the book detials
+    │   ├── BookShelfChanger.js # Usable Book Menu to view the dropdown list of choices
+    │   ├── BookShelfChangerOptions.js # Usable Handler for changing and display book shelf reading option
+    │   └── BookDetails.js # Full Book  View Page "/book/:id" for display all information about the book
+    ├── icons # Helpful images for the app
     │   ├── add.svg
     │   ├── arrow-back.svg
     │   └── arrow-drop-down.svg
-    ├── index.css # Global styles. You probably won't need to change anything here.
+    ├── css # Helpful css files
+    │   ├── App.css # Styles for the app.
+    │   └── index.css # Global styles.
+    ├── BooksAPI.js # A JavaScript API for the provided Udacity backend.
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
-
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
 
 ## Backend Server
 
