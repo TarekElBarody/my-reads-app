@@ -5,6 +5,8 @@ In the My Reads App project, you'll Have a bookshelf that allows you to select a
 ## App Functionality
 
 ### Main Page
+> The Main Router is `/`
+
 In this application, the main page displays a list of "shelves" (i.e. categories), each of which contains a number of books. The three shelves are:
 
 - Currently Reading
@@ -12,9 +14,20 @@ In this application, the main page displays a list of "shelves" (i.e. categories
 - Read
 
 ### Search Page 
+> The Search Router is `/search`
+
 The search page has a text input that may be used to find books. As the value of the text input changes, the books that match that query are displayed on the page, along with a control that lets you add the book to your library.
 
-## Get Started
+### Book Page Full Detials
+> The Book View Router is `/book/:id`
+
+The book full view page all information for the book you select to view.
+You can use :
+- Click on the photo of the book to navigate to book page
+- Or if you have the ID of the book you can enter the url directly using `/book/:id`
+
+
+# Get Started
 
 To get started developing right away:
 
